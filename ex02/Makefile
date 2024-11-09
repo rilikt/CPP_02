@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/09 14:12:14 by timschmi          #+#    #+#              #
-#    Updated: 2024/11/09 14:12:18 by timschmi         ###   ########.fr        #
+#    Created: 2024/11/09 15:31:31 by timschmi          #+#    #+#              #
+#    Updated: 2024/11/09 15:31:33 by timschmi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJ = $(SRC:.cpp=.o)
 CC = c++
 
 NAME = fixed
-CFLAGS = -std=c++17
+CFLAGS = -std=c++17 -Wall -Werror -Wextra
 
 all: $(NAME)
 
@@ -35,4 +35,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
