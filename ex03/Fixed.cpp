@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:09 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/09 16:04:47 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:31:12 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int Fixed::toInt(void) const
     return (int)(i >> j);
 }
 
-std::ostream& operator<<(std::ostream &os, const Fixed &fixed) // no Fixed::
+std::ostream& operator<<(std::ostream &os, const Fixed &fixed)
 {
     os << fixed.toFloat();
     return os;
