@@ -1,7 +1,7 @@
 SRC = main.cpp Fixed.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC = g++
+CC = c++
 
 NAME = fixed
 CFLAGS = -std=c++17
