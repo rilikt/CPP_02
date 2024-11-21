@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: h4ns <h4ns@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:09 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/09 15:31:12 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/15 22:09:23 by h4ns             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ std::ostream& operator<<(std::ostream &os, const Fixed &fixed)
     return os;
 }
 
-
 Fixed::~Fixed(void)
 {
     std::cout << "Destructor called" << std::endl;
@@ -79,7 +78,6 @@ void Fixed::operator=(const Fixed &other)
     std::cout << "Copy assignment operator called" << std::endl;
     this->i = other.getRawBits();
 }
-
 
 // ex02
 
