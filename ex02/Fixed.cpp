@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:09 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/30 15:19:36 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 17:28:21 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,37 @@
 
 int Fixed::getRawBits(void) const
 {
-    // std::cout << "getRawBits member function called" << std::endl;
+    // std::cout << B << "getRawBits member function called" << R << std::endl;
     return (i);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-    std::cout << "setRawBits member function called" << std::endl;
+    std::cout << B << "setRawBits member function called" << R << std::endl;
     this->i = raw;
 }
 
 Fixed::Fixed(void)
 {
-    std::cout << "Default Constructor called" << std::endl;
+    std::cout << G << "Default Constructor called" << R << std::endl;
     this->i = 0;  
 }
 
 Fixed::Fixed(int value)
 {
-    std::cout << "Int Constructor called" << std::endl;
+    std::cout << G << "Int Constructor called" << R << std::endl;
     this->i = value << j;
-    // std::cout << i << std::endl;
 }
 
 Fixed::Fixed(float value)
 {
-    std::cout << "Float Constructor called" << std::endl; 
+    std::cout << G << "Float Constructor called" << R << std::endl; 
     this->i = roundf(value * (1 << j)); // using round here adds more precision because regular casting always rounds down
-    // std::cout << i << std::endl;
 }
 
 float Fixed::toFloat(void) const
 {
-    // std::cout << "to float conversion" << std::endl;
-    float re = (float)this->i / (float)(1 << j);
-    return (re);
+    return ((float)i / (1 << j));
 }
 
 int Fixed::toInt(void) const
@@ -56,7 +52,7 @@ int Fixed::toInt(void) const
     return (int)(i >> j);
 }
 
-std::ostream& operator<<(std::ostream &os, const Fixed &fixed) // no Fixed::
+std::ostream& operator<<(std::ostream &os, const Fixed &fixed) 
 {
     os << fixed.toFloat();
     return os;
@@ -64,18 +60,18 @@ std::ostream& operator<<(std::ostream &os, const Fixed &fixed) // no Fixed::
 
 Fixed::~Fixed(void)
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << Ro << "Destructor called" << R << std::endl;
 } 
 
 Fixed::Fixed(const Fixed &other)
 {
-    std::cout << "Copy Constructor called" << std::endl;
+    std::cout << G << "Copy Constructor called" << R << std::endl;
     this->i = other.getRawBits();
 }
 
 Fixed& Fixed::operator=(const Fixed &other)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << G << "Copy assignment operator called" << R << std::endl;
     this->i = other.getRawBits();
 
     return *this;
