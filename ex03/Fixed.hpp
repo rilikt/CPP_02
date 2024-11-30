@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:17 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/30 14:12:55 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 15:40:02 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 #include <iostream>
 #include <cmath>
+
+#define R "\033[0m"
+#define Ro "\033[31m"
+#define G "\033[32m"
+#define Y "\033[33m"
+#define B "\033[34m"
 
 class Fixed 
 {
@@ -28,7 +34,7 @@ class Fixed
         Fixed(float value);
 
         Fixed(const Fixed &other);  // Copy constructor
-        void operator=(const Fixed &other); // Copy assignment operator
+        Fixed& operator=(const Fixed &other); // Copy assignment operator
         
         float operator*(const Fixed &b);
         float operator+(const Fixed &b);

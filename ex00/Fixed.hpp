@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:40:34 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/30 14:10:51 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 15:30:40 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define FIXED_HPP
 
 #include <iostream>
+
+#define R "\033[0m"
+#define Ro "\033[31m"
+#define G "\033[32m"
+#define Y "\033[33m"
+#define B "\033[34m"
 
 class Fixed 
 {
@@ -24,7 +30,7 @@ class Fixed
     public:
         Fixed(void);    // Default constructor
         Fixed(const Fixed &other);  // Copy constructor
-        void operator=(const Fixed &other); // Copy assignment operator
+        Fixed& operator=(const Fixed &other); // Copy assignment operator
         ~Fixed(void);   // Destructor
 
         int getRawBits(void) const; // const functions cant alter class variables 
