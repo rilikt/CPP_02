@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:40:34 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/09 12:40:37 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 14:10:51 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ class Fixed
 
         int getRawBits(void) const; // const functions cant alter class variables 
         void setRawBits(int const raw);
-
-
 };
-
 
 #endif

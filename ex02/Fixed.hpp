@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:17 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/09 15:31:20 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 14:10:36 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
     private:
         int i;
         static const int j = 8;
-    
+
     public:
         Fixed(void);    // Default constructor
         Fixed(int value);
@@ -30,8 +30,6 @@ class Fixed
         Fixed(const Fixed &other);  // Copy constructor
         void operator=(const Fixed &other); // Copy assignment operator
 
-        friend std::ostream& operator<<(std::ostream &os, const Fixed &fixed); // Overloaded insertion operator
-        
         float operator*(const Fixed &b);
         float operator+(const Fixed &b);
         float operator-(const Fixed &b);
@@ -55,9 +53,6 @@ class Fixed
         static Fixed& max(Fixed &a, Fixed &b);
         static const Fixed& max(const Fixed &a, const Fixed &b);
 
-
-
-
         ~Fixed(void);   // Destructor
 
         int getRawBits(void) const; // const functions cant alter class variables 
@@ -67,5 +62,6 @@ class Fixed
 
 };
 
+std::ostream& operator<<(std::ostream &os, const Fixed &fixed); // Overloaded insertion operator
 
 #endif

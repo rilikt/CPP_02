@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: h4ns <h4ns@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:39:46 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/21 18:59:10 by h4ns             ###   ########.fr       */
+/*   Updated: 2024/11/30 14:13:39 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,12 @@ class Point
 
 		// void operator=(const Point &other); // copy assignment operator for const values?!?!
 
-		friend std::ostream& operator<<(std::ostream &os, const Point &p);
-	
-
-
 };
 
 // bsp
 bool bsp_triangle(Point &p, Point &a, Point &b, Point &c);
 Fixed is_inside(Point &p, Point &a, Point &b);
+
+std::ostream& operator<<(std::ostream &os, const Point &p);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:09 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/09 16:04:47 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 14:14:12 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ std::ostream& operator<<(std::ostream &os, const Fixed &fixed) // no Fixed::
     return os;
 }
 
-
 Fixed::~Fixed(void)
 {
     std::cout << "Destructor called" << std::endl;
@@ -80,9 +79,7 @@ void Fixed::operator=(const Fixed &other)
     this->i = other.getRawBits();
 }
 
-
 // ex02
-
 float Fixed::operator*(const Fixed &b)
 {
     float fre = (this->toFloat() * b.toFloat()) + 0.0f; // adding the + 0.0f seems so stupid, float constructor doesn't recognize otherwise
@@ -107,7 +104,6 @@ float Fixed::operator/(const Fixed &b)
     float fre = (this->toFloat() / b.toFloat()) + 0.0f;
     return(fre);
 }
-
 
 bool Fixed::operator>(const Fixed &b) const
 {
@@ -189,9 +185,7 @@ const Fixed& Fixed::max(const Fixed &a, const Fixed &b)
         return(b);
 }
 
-
 // in- decrement
-
 Fixed& Fixed::operator++()
 {
     ++i;

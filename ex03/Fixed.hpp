@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:17 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/09 15:47:25 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 14:12:55 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ class Fixed
 
         Fixed(const Fixed &other);  // Copy constructor
         void operator=(const Fixed &other); // Copy assignment operator
-
-        friend std::ostream& operator<<(std::ostream &os, const Fixed &fixed); // Overloaded insertion operator
         
         float operator*(const Fixed &b);
         float operator+(const Fixed &b);
@@ -64,5 +62,6 @@ class Fixed
 
 };
 
+std::ostream& operator<<(std::ostream &os, const Fixed &fixed); // Overloaded insertion operator
 
 #endif

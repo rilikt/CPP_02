@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: h4ns <h4ns@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:09 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/15 22:09:23 by h4ns             ###   ########.fr       */
+/*   Updated: 2024/11/30 14:12:38 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,6 @@ float Fixed::operator/(const Fixed &b)
     return(fre);
 }
 
-
 bool Fixed::operator>(const Fixed &b) const
 {
     if (this->i > b.i)
@@ -187,9 +186,7 @@ const Fixed& Fixed::max(const Fixed &a, const Fixed &b)
         return(b);
 }
 
-
 // in- decrement
-
 Fixed& Fixed::operator++()
 {
     ++i;

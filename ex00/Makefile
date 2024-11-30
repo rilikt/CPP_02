@@ -6,7 +6,7 @@
 #    By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/09 12:40:51 by timschmi          #+#    #+#              #
-#    Updated: 2024/11/09 12:40:55 by timschmi         ###   ########.fr        #
+#    Updated: 2024/11/30 14:07:40 by timschmi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJ = $(SRC:.cpp=.o)
 CC = c++
 
 NAME = fixed
-CFLAGS = -std=c++17
+CFLAGS = -std=c++17 -Wall -Werror -Wextra
 
 all: $(NAME)
 
@@ -35,4 +35,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-

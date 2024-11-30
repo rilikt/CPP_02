@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:40:43 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/09 12:40:46 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 14:11:10 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(void)
 {
     Fixed a;
-    Fixed b( a );
+    Fixed b(a);
     Fixed c;
     c = b;
     
@@ -23,5 +23,5 @@ int main(void)
     std::cout << b.getRawBits() << std::endl;
     std::cout << c.getRawBits() << std::endl;
     
-    return 0;
+    return (0);
 }

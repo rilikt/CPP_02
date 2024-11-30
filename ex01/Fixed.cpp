@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:11:53 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/09 14:11:56 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 14:11:29 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ std::ostream& operator<<(std::ostream &os, const Fixed &fixed)
     return os;
 }
 
-
 Fixed::~Fixed(void)
 {
     std::cout << "Destructor called" << std::endl;
@@ -77,4 +76,3 @@ void Fixed::operator=(const Fixed &other)
     std::cout << "Copy assignment operator called" << std::endl;
     this->i = other.getRawBits();
 }
-

@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:12:00 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/09 14:12:03 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 14:10:41 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,7 @@ class Fixed
         Fixed(const Fixed &other);  // Copy constructor
         void operator=(const Fixed &other); // Copy assignment operator
 
-        friend std::ostream& operator<<(std::ostream &os, const Fixed &fixed); // Overloaded insertion operator
         ~Fixed(void);   // Destructor
-
 
         int getRawBits(void) const; // const functions cant alter class variables 
         void setRawBits(int const raw);
@@ -41,5 +39,6 @@ class Fixed
 
 };
 
+std::ostream& operator<<(std::ostream &os, const Fixed &fixed); // Overloaded insertion operator
 
 #endif
