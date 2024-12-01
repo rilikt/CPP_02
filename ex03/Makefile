@@ -6,7 +6,7 @@
 #    By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/09 15:31:31 by timschmi          #+#    #+#              #
-#    Updated: 2024/11/09 16:03:00 by timschmi         ###   ########.fr        #
+#    Updated: 2024/12/01 15:26:28 by timschmi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJ = $(SRC:.cpp=.o)
 
 CC = c++
 
-NAME = fixed
+NAME = bsp
 CFLAGS = -std=c++17 -Wall -Werror -Wextra
 
 all: $(NAME)

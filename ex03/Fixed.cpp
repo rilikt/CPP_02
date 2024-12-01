@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:09 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/30 15:20:42 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/01 15:43:21 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,26 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
-    std::cout << "setRawBits member function called" << std::endl;
+    // std::cout << B << "setRawBits member function called" << R << std::endl;
     this->i = raw;
 }
 
 Fixed::Fixed(void)
 {
-    std::cout << "Default Constructor called" << std::endl;
+    // std::cout << G << "Default Constructor called" << R << std::endl;
     this->i = 0;  
 }
 
 Fixed::Fixed(int value)
 {
-    std::cout << "Int Constructor called" << std::endl;
+    // std::cout << G << "Int Constructor called" << R << std::endl;
     this->i = value << j;
-    // std::cout << i << std::endl;
 }
 
 Fixed::Fixed(float value)
 {
-    std::cout << "Float Constructor called" << std::endl; 
+    // std::cout << G << "Float Constructor called" << R << std::endl; 
     this->i = roundf(value * (1 << j)); // using round here adds more precision because regular casting always rounds down
-    // std::cout << i << std::endl;
 }
 
 float Fixed::toFloat(void) const
@@ -64,23 +62,27 @@ std::ostream& operator<<(std::ostream &os, const Fixed &fixed)
 
 Fixed::~Fixed(void)
 {
-    std::cout << "Destructor called" << std::endl;
+    // std::cout << Ro << "Destructor called" << R << std::endl;
 } 
 
 Fixed::Fixed(const Fixed &other)
 {
-    std::cout << "Copy Constructor called" << std::endl;
+    // std::cout << G << "Copy Constructor called" << R << std::endl;
     this->i = other.getRawBits();
 }
 
 Fixed& Fixed::operator=(const Fixed &other)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    if (this == &other)
+        return *this;
+
+    // std::cout << G << "Copy assignment operator called" << R << std::endl;
     this->i = other.getRawBits();
+
+    return *this;
 }
 
 // ex02
-
 float Fixed::operator*(const Fixed &b)
 {
     float fre = (this->toFloat() * b.toFloat()) + 0.0f; // adding the + 0.0f seems so stupid, float constructor doesn't recognize otherwise

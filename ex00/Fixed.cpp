@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:40:21 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/30 15:32:19 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/01 15:42:25 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ Fixed::Fixed(const Fixed &other)
 
 Fixed& Fixed::operator=(const Fixed &other)
 {
+    if (this == &other)
+        return *this;
+
     std::cout << G << "Copy assignment operator called" << R << std::endl;
     this->i = other.getRawBits();
 

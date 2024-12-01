@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:24 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/30 14:12:59 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/01 15:50:08 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ int main( void )
     Point e (2, 0); // on the edge
     Point o (5, 1); // outside
 
-    if (bsp_triangle(p, a, b, c))
-        std::cout << "Point p lies within the triangle" << std::endl;
+    if (bsp(a, b, c, p))
+        std::cout << Y << "Point p lies within the triangle" << R << std::endl;
     else
-        std::cout << "Point p lies outside the triangle" << std::endl;
+        std::cout << Y << "Point p lies outside the triangle" << R << std::endl;
     
-    if (bsp_triangle(e, a, b, c))
-        std::cout << "Point e lies within the triangle" << std::endl;
+    if (bsp(a, b, c, e))
+        std::cout << Y << "Point e lies within the triangle" << R << std::endl;
     else
-        std::cout << "Point e lies outside the triangle" << std::endl;
+        std::cout << Y << "Point e lies outside the triangle" << R << std::endl;
     
-    if (bsp_triangle(o, a, b, c))
-        std::cout << "Point o lies within the triangle" << std::endl;
+    if (bsp(a, b, c, o))
+        std::cout << Y << "Point o lies within the triangle" << R << std::endl;
     else
-        std::cout << "Point o lies outside the triangle" << std::endl;
+        std::cout << Y << "Point o lies outside the triangle" << R << std::endl;
     
     return(0);
 }

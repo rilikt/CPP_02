@@ -6,56 +6,49 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:31:24 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/30 17:30:44 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/01 15:10:57 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-// int main(void)
-// {
-//     Fixed a(1);
-//     Fixed c(1);
-//     Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-//     std::cout << a + b << std::endl;
-//     std::cout << a - b << std::endl;
-//     std::cout << a / b << std::endl;
-//     if (a != b)
-//         std::cout << "ok" << std::endl;
-//     else
-//         std::cout << "nok" << std::endl;
+//own main
+int main(void)
+{
+	Fixed a(5);
+	Fixed b(10);
+	
+	if (a < b)
+		std::cout << Y << "Object a is smaller" << R << std::endl;
+	if (b > a)
+		std::cout << Y << "Object b is bigger" << R << std::endl;
+	
+	std::cout << B << a << " x " << b << " = " << a * b << R << std::endl;
+	std::cout << B << b << " / " << a << " = " << b / a << R << std::endl;
+	std::cout << B << b << " - " << a << " = " << b - a << R << std::endl;
+	std::cout << B << b << " + " << a << " = " << b + a << R << std::endl;
 
-//     std::cout << ++a << std::endl;
-//     std::cout << a << std::endl;
-//     std::cout << a++ << std::endl;
-//     std::cout << a << std::endl;
-//     std::cout << Fixed::min(a, b) << std::endl;
-//     std::cout << Fixed::max( a, b ) << std::endl;
-//     return 0;
-// }
+	std::cout << B << ++b << R << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << B << a << R << std::endl;
 
-// int main( void ) {
-//     Fixed a;
-//     Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-//     std::cout << a << std::endl;
-//     std::cout << a++ << std::endl;
-//     // std::cout << a << std::endl;
-//     // std::cout << a++ << std::endl;
-//     // std::cout << a << std::endl;
-//     // std::cout << b << std::endl;
-//     // std::cout << Fixed::max( a, b ) << std::endl;
-//     return 0;
-// }
+	std::cout << Y << "Max:" << Fixed::max(a , b) << R << std::endl;
+	std::cout << Y << "Min:" << Fixed::min(a , b) << R << std::endl;
 
-int main( void ) {
-Fixed a;
-Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-std::cout << a << std::endl;
-std::cout << ++a << std::endl;
-std::cout << a << std::endl;
-std::cout << a++ << std::endl;
-std::cout << a << std::endl;
-std::cout << b << std::endl;
-std::cout << Fixed::max( a, b ) << std::endl;
-return 0;
+	return (0);
 }
+
+// subject main
+// int main( void ) 
+// {
+// Fixed a;
+// Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+// std::cout << a << std::endl;
+// std::cout << ++a << std::endl;
+// std::cout << a << std::endl;
+// std::cout << a++ << std::endl;
+// std::cout << a << std::endl;
+// std::cout << b << std::endl;
+// std::cout << Fixed::max( a, b ) << std::endl;
+// return 0;
+// }
